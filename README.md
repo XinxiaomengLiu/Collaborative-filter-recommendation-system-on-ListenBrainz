@@ -2,22 +2,11 @@
 # DSGA1004 - BIG DATA
 ## Final project
 
-*Handout date*: 2023-04-12
-
-*Checkpoint submission*: 2023-04-28
-
-*Submission deadline*: 2023-05-16
-
 
 # Overview
 
 In the final project, you will apply the tools you have learned in this class to solve a realistic, large-scale applied problem.
 Specifically, you will build and evaluate a collaborative-filter based recommender system. 
-
-In either case, you are encouraged to work in **groups of up to 3 students**:
-
-- Groups of 1--2 will need to implement one extension (described below) over the baseline project for full credit.
-- Groups of 3 will need to implement two extensions for full credit.
 
 ## The data set
 
@@ -28,7 +17,7 @@ Each observation consists of a single interaction between a user and a song.
 **Note**: this is real data.  It may contain offensive language (e.g. in song titles or artist names).  It is entirely possible to complete the assignment using only the interaction data and ID fields without investigating metadata.
 
 
-## Basic recommender system [80% of grade]
+## Basic recommender system
 
 1.  As a first step, you will need to partition the interaction data into training and validation samples as discussed in lecture.
     I recommend writing a script do this in advance, and saving the partitioned data for future use.
@@ -70,10 +59,7 @@ If too many people run inefficient code simultaneously, it can slow down the ent
 **NOTE**: At the time the project is released (2023-04-12), the version of Parquet currently installed on Dataproc has a known issue with reading large parquet files.  It should not cause any problems here, but just in case it does, we have provided a reduced training set (`*_train_small.parquet`) for you to work with.
 
 
-## Extensions [20% of grade]
-
-For full credit, implement an extension on top of the baseline collaborative filter model.
-Again, if you're working in a group of 3, you must implement two extensions for full credit.
+## Extensions 
 
 The choice of extension is up to you, but here are some ideas:
 
@@ -82,31 +68,3 @@ The choice of extension is up to you, but here are some ideas:
   
 Other extension ideas are welcome as well, but must be approved in advance by the instructional staff.
 
-## What to turn in
-
-In addition to all of your code, produce a final report (no more than 5 pages), describing your implementation, evaluation results, and extensions.
-Your report should clearly identify the contributions of each member of your group. 
-If any additional software components were required in your project, your choices should be described and well motivated here.  
-
-Include a PDF of your final report through Brightspace.  Specifically, your final report should include the following details:
-
-- Link to your group's GitHub repository
-- Documentation of how your train/validation splits were generated
-    - Any additional pre-processing of the data that you decide to implement
-- Evaluation of popularity baseline
-- Documentation of latent factor model's hyper-parameters and validation
-- Evaluation of latent factor model
-- Documentation of extension(s)
-
-Any additional software components that you use should be cited and documented with installation instructions.
-
-## Timeline
-
-It will be helpful to commit your work in progress to the repository.
-Toward this end, we recommend the following timeline to stay on track:
-
-- [ ] 2023/04/21: data pre-processing, train/validation partitioning, popularity baseline model.
-- [ ] **2023/04/28**: evaluation, checkpoint submission with baseline results.
-- [ ] 2023/05/05: Working latent factor model implementation on subsample of training data.
-- [ ] 2023/05/12: Scale up to the full dataset and develop extensions.
-- [ ] 2023/05/16: final project submission.  **NO EXTENSIONS PAST THIS DATE.**
