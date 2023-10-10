@@ -1,0 +1,48 @@
+-------------
+val and test: 0.0001 of original data
+
+computing precision_at_k...
+LightFM model with rank = 100, no_components = 10, loss = warp, user_alpha = 0.1 :
+Precision at k=100: 6.648936050623888e-06
+Time cost: 1903.9810919761658
+
+
+computing precision_at_k...
+LightFM model with rank = 100, no_components = 10, loss = warp, user_alpha = 0.01:
+Precision at k=100: 1.3297872101247776e-05
+Time cost: 42939.12155795097
+
+
+-------------
+new round:
+
+LightFM model with rank = 100, no_components = 10, loss = warp, user_alpha = 0.1 :
+Time cost (fit): 17m38.5s
+Precision at k=100: 0.0
+Time cost (evaluate): 743.776798248291 (12m23.8s)
+
+LightFM model with rank = 100, no_components = 10, loss = warp, user_alpha = 0.01 :
+Time cost (fit): 176.82877612113953 (2m56.8s)
+Precision at k=100: 6.798096364946105e-06
+Time cost (evaluate): 737.9778308868408 (12m18.0s)
+
+LightFM model with rank = 100, no_components = 10, loss = warp, user_alpha = 0.001 :
+Time cost (fit): 176.82877612113953 (2m56.8s)
+Precision at k=100: 6.798096364946105e-06
+Time cost (evaluate): 737.9778308868408 (12m18.0s)
+
+LightFM model with rank = 100, no_components = 20, loss = warp, user_alpha = 0.1 :
+Time cost (fit): 1054.7219142913818 (17m34.8s)
+Precision at k=100: 6.798096364946105e-06
+Time cost (evaluate): 539.8741087913513 (8m59.9s)
+
+
+1-5 conclusion: different no_components, user_alpha
+
+1. no_components irrelevant
+2. user_alpha=0.1 chosen
+
+6- conclusion: different item_alpha
+
+
+
